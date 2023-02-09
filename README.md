@@ -21,7 +21,7 @@ Dataset size: 3091024
 ## Part 1 Exploratory Data Analysis
 
 
-
+---
 
 
 ## Part 2 Recommender System
@@ -42,8 +42,8 @@ We try to predict rating of a user to a product by the weighted average of its r
 
 Performance: 
 
-- MSE: 1.9474959814844819
-- Accuracy: 0.21011289462650565
+- MSE: **1.9474959814844819**
+- Accuracy: **0.21011289462650565**
 
 #### Latent Factor Model
 
@@ -51,8 +51,8 @@ Approximate the user and the product by a length k vector with unknown values, a
 
 Performance:
 
-- MSE: 1.6888076658234337
-- Accuracy: 0.2831695904011098
+- MSE: **1.6888076658234337**
+- Accuracy: **0.2831695904011098**
 
 #### Neural Collaborative Filtering
 
@@ -60,8 +60,8 @@ This is an idea built on Latent Factor Model, if we are guessing those vectors, 
 
 Performance:
 
-- MSE: 0.7011991391584224
-- Accuracy: 0.5145615363213437
+- MSE: **0.7011991391584224**
+- Accuracy: **0.5145615363213437**
 
 
 
@@ -79,7 +79,7 @@ One of the major issue of naïve recommender system is its training data is spar
 
 Closely related to the previous problem, one idea will be not to predict the ratings but whether to predict if one user will interact with a product or not. This greatly increase the amount of data we have since <u>implicit feedback</u> can be gathered more than reviews dataset. This can includes the data of *purchase, view, search....*
 
-
+---
 
 ## Part 3 NLP 
 
@@ -101,10 +101,10 @@ The Tf-idf vectorizer can transform a sentence into useful vectors based on impo
 
 Performance:
 
-- Basic Accuracy: 0.5057333333333334
-- (insert graph here)
-- Negative vs Positive Accuracy: 0.9195728349741364
-- (insert graph here)
+- Basic Accuracy: **0.5057333333333334**
+- ![baseline model confusion matrix](https://github.com/KULcoder/Comprehensive-Amazon-Reviews-Project/blob/main/Part3_NLP/images/baseline_cm.png)
+- Negative vs Positive Accuracy: **0.9195728349741364**
+- ![baseline model positive vs negative confusion matrix](https://github.com/KULcoder/Comprehensive-Amazon-Reviews-Project/blob/main/Part3_NLP/images/baseline_np_cm.png)
 
 #### Fine Tuned BERT Model
 
@@ -112,10 +112,10 @@ BERT model, the encoder part of transformer (decoder part is the famous GPT mode
 
 Performance:
 
-- Basic Accuracy: 0.6261333333333333
-- (insert graph here)
-- Negative vs Positive Accuracy: 0.9834095141357712
-- (insert graph here)
+- Basic Accuracy: **0.6261333333333333**
+- ![BERT model confusion matrix](https://github.com/KULcoder/Comprehensive-Amazon-Reviews-Project/blob/main/Part3_NLP/images/bert_cm.png)
+- Negative vs Positive Accuracy: **0.9834095141357712**
+- ![BERT model positive vs negative confusion matrix](https://github.com/KULcoder/Comprehensive-Amazon-Reviews-Project/blob/main/Part3_NLP/images/bert_np_cm.png)
 
 
 
@@ -129,7 +129,7 @@ The improvement of BERT model might not be as high as expected. However, I do fi
 
 
 
-
+---
 
 ## Reference
 
