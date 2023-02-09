@@ -119,11 +119,13 @@ Performance:
 
 
 
+### Result
 
+The improvement of BERT model might not be as high as expected. However, I do find that the BERT model is not only making more correct prediction, but also making less severe false predictions. Which brings me to think:
 
-
-
-
+- Is it possible to obtain the exact ratings by only the review text? Can a human do this? Humans might be like the model that can properly predict is a review text positive or negative, too.
+- There might be other strong pre-trained model (like lots of them on huggingface.co) can improve the performance of the model.
+- There might be better way of preprocessing the data that filter / transform the data to improve the performacne of the model.
 
 
 
