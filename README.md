@@ -14,11 +14,64 @@ Dataset size: 3091024
 
 **This project is designed for me to better understand data science**: What is the purpose of data science?
 
-- The core is to extract and utilize useful information from data
+- *The core is to extract and utilize useful information from data*
+
+
+
+Different notebook is in different folders. There might be additional information provided in md file in each folder.
 
 
 
 ## Part 1 Exploratory Data Analysis
+
+This part we performed some data preprocess, and perform some univariate and multivariate data analysis (majorly visualized in notebook).
+
+**Dataset Columns**:
+
+- marketplace: 2 letter country code of the marketplace where the review was written.
+- customer_id: Random identifier that can be used to aggregate reviews written by a single author.
+- review_id: The unique ID of the review.
+- product_id: The unique Product ID the review pertains to. In the multilingual dataset the reviews for the same product in different countries can be grouped by the same product_id.
+- product_parent: Random identifier that can be used to aggregate reviews for the same product.
+- product_title: Title of the product.
+- product_category: Broad product category that can be used to group reviews (also used to group the dataset into coherent parts).
+- star_rating: The 1-5 star rating of the review.
+- helpful_votes: Number of helpful votes.
+- total_votes: Number of total votes the review received.
+- vine: Review was written as part of the Vine program.
+- verified_purchase: The review is on a verified purchase.
+- review_headline: The title of the review.
+- review_body: The review text.
+- review_date: The date the review was written.
+
+### Data Preprocess
+
+Following preprocess is performed:
+
+- missing values: since only very few missing values is in the data, we directly drop the rows of missing values
+- duplicate data: drop any duplicate data
+- irrelevant data: drop the following irrelevant columns: 'marketplace', 'product_parent', 'product_category'
+- correct data type: change review_date column from string data type into datetime data type
+- transform data: we create some new features for better understand the data
+
+### Univariate Analysis
+
+Investigate the distribution and values in each features.
+
+Some interesting observations: 
+
+- Review data in more on weekdays than weekends
+
+- data is majorly clustered after 2013
+
+### Multivariate Analysis
+
+Investigate the relationship between two variables.
+
+Some interesting observations:
+
+- Star Ratings do significantly influence the distribution of other features (review week days, verified purchase, review length...)
+- different category of product display different average ratings
 
 
 ---
@@ -127,7 +180,7 @@ The improvement of BERT model might not be as high as expected. However, I do fi
 - There might be other strong pre-trained model (like lots of them on huggingface.co) can improve the performance of the model.
 - There might be better way of preprocessing the data that filter / transform the data to improve the performacne of the model.
 
-
+(the training process graph is provided in md under 'Part3_NLP' folder)
 
 ---
 
