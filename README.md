@@ -193,13 +193,3 @@ https://arxiv.org/abs/1708.05031
 https://towardsdatascience.com/deep-learning-based-recommender-systems-3d120201db7e
 
 
-
-
-
-Waited to be present & organized
-
-## To Do
-
-1. Add some graphs of training / validation
-2. Add some analysis on review body
-3. organize into different folders
